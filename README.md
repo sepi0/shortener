@@ -1,12 +1,35 @@
 # Install
-1. ``git clone https://github.com/sepi0/shortener.git``
+1. Clone repository
+```
+git clone https://github.com/sepi0/shortener.git
+```
 
-2. ``go build main.go``
+2. Change into directory
+```
+cd shortener
+```
+3. Initialize go.mod 
+```
+go mod init
+```
+4. Install gorilla mux
+```
+go get -u github.com/gorilla/mux
+```
+5. Install BoltDB
+```
+go get github.com/boltdb/bolt/
+```
+6. Build the module
+```
+go build .
+```
 
-## Run
-1. ``go run main.go``
-
-2. ``visit http://localhost:8080/``
+# Run
+```
+go run .
+```
+   
 
 
 ### Usage
