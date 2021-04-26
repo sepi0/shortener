@@ -24,6 +24,8 @@ func CreationEndpointHandler(w http.ResponseWriter, r *http.Request) {
 	_, err := url.ParseRequestURI(r.FormValue("urlInputField"))
 	if err != nil {
 		log.Printf("You've entered invalid URL.")
+		t, _ := template.ParseFiles("invalidurl.html")
+		t.Execute(w, nil)
 	} else {
 		err = r.ParseForm()
 		if err != nil {
